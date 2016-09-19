@@ -1,0 +1,7 @@
+/etc/libvirt/qemu.conf
+/etc/sysctl.conf
+/etc/security/limits.conf
+/etc/default/grub
+/etc/modprobe.d/blacklist.conf
+/etc/modprobe.d/kvm.conf
+/etc/apparmor.d/abstractions/libvirt-qemu
