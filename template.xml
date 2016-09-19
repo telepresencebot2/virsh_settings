@@ -1,0 +1,38 @@
+<domain type='kvm'>
+   <name>kvm1</name>
+   <uuid>a1e40383-2dfb-47f7-9cf6-589fc9679aa7</uuid>
+   <memory>524288</memory>
+   <currentMemory>524288</currentMemory>
+   <vcpu>1</vcpu>
+   <os>
+     <type arch='x86_64' machine='pc'>hvm</type>
+     <boot dev='cdrom'/>
+ </os>
+ <features>
+    <acpi/>
+    <apic/>
+     <pae/>
+ </features>
+ <clock offset='localtime'/>
+ <on_poweroff>destroy</on_poweroff>
+ <on_reboot>restart</on_reboot>
+ <on_crash>restart</on_crash>
+ <devices>
+     <emulator>/usr/libexec/qemu-kvm</emulator>
+     <disk type='file' device='disk'>
+       <source file='/var/lib/libvirt/images/kvm1.img'/>
+       <target dev='hda' bus='ide'/>
+     </disk>
+    <disk type='file' device='cdrom'>
+     <source file='/home/askarali/.bb/Fedora-14-x86_64-Live/Fedora-14-x86_64-Live-Desktop.iso'/>
+     <target dev='hdc' bus='ide'/>
+     <readonly/>
+     </disk>
+     <interface type='network'>
+      <mac address='54:52:00:2a:58:0d'/>
+      <source network='default'/>
+    </interface>
+     <input type='mouse' bus='ps2'/>
+     <graphics type='vnc' port='-1' autoport='yes' keymap='en-us'/>
+ </devices>
+ </domain>
