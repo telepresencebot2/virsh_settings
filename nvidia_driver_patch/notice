@@ -1,0 +1,14 @@
+Here is a copy of a git repository found at https://github.com/sk1080/nvidia-kvm-patcher.git
+
+I DID NOT MAKE THIS
+
+Refer to the above original repository for updates!
+I'm putting this here for completeness and just in case that repo is ever taken down.
+
+It is extremely helpful as it will allow you to use an nvidia card in a vm without disabling any vm features!
+
+to enable test signing, run cmd as admin and execute:
+Bcdedit -set TESTSIGNING ON
+and reboot.
+
+Remeber to turn it of again when you're done.
